@@ -1,19 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-use Illuminate\Support\Facades\Route;
-use Laravel\Fortify\Features;
-
-Route::inertia('/', 'welcome', [
-    'canRegister' => Features::enabled(Features::registration()),
-])->name('home');
-
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::inertia('dashboard', 'dashboard')->name('dashboard');
-});
-
-require __DIR__.'/settings.php';
-=======
 //use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -71,4 +57,3 @@ Route::group([
         })->name('transactions');
     Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
 });
->>>>>>> 68a286bb328b13a00a6fe63901364bc44794f97e
